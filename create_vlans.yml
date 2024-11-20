@@ -1,0 +1,12 @@
+---
+- name: Create VLANs on Arista switches
+  hosts: leaf1
+  gather_facts: false
+  tasks:
+
+
+  - name: Create VLANs
+    arista.eos.eos_vlans:
+      config:
+        - vlan_id: 10
+          state: active
